@@ -8,3 +8,8 @@ addons:
 
 script:
   - ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
