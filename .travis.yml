@@ -5,7 +5,7 @@ matrix:
   include:
     - script:
       - echo "hello i am here!"
-      - install.sh
+      - ./install.sh
 
 addons:
   sonarcloud:
