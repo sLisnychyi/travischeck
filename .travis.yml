@@ -12,6 +12,7 @@ addons:
 
 install:
   - echo "${TRAVIS_BUILD_DIR}"
+  - echo $TRAVIS_BUILD_DIR
   - source "${TRAVIS_BUILD_DIR}/install.sh"
 
 script:
