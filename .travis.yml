@@ -4,9 +4,9 @@ language: java
 
 matrix:
   include:
-    - script:
-      - echo "hello i am here!"
-      - source install.sh
+    - stage: build
+      script: echo "hello i am here!"
+    - script: source install.sh
 
 addons:
   sonarcloud:
