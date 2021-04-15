@@ -13,7 +13,7 @@ addons:
     organization: "slisnychyi" # the key of the org you chose at step #3
     token: "${SONAR_TOKEN}" # encrypted value of your token
 
-install: install.sh
+install: source install.sh
 
 script:
   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck; fi'
