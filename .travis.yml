@@ -1,12 +1,12 @@
 dist: bionic
 language: java
-sudo: true
+#sudo: true
 
 matrix:
   include:
     - script:
       - echo "hello i am here!"
-      - ./install.sh
+      - source install.sh
 
 addons:
   sonarcloud:
