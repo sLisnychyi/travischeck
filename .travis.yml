@@ -1,5 +1,6 @@
 dist: bionic
 language: java
+sudo: true
 
 matrix:
   include:
