@@ -11,7 +11,7 @@ addons:
     token: "${SONAR_TOKEN}" # encrypted value of your token
 
 install:
-  - script: install.sh
+  - source install.sh
 
 script:
   - ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck
