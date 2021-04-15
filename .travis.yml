@@ -10,6 +10,9 @@ addons:
     organization: "slisnychyi" # the key of the org you chose at step #3
     token: "${SONAR_TOKEN}" # encrypted value of your token
 
+install:
+  - source "./install.sh"
+
 script:
   - ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck
 
