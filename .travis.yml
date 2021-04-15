@@ -2,19 +2,22 @@ dist: bionic
 language: java
 #sudo: true
 
-matrix:
-  include:
-    - stage: build
-      script: echo "hello i am here!"
-    - script: source install.sh
+#matrix:
+#  include:
+#    - stage: build
+#      script:
+#    - script: source
 
 addons:
   sonarcloud:
     organization: "slisnychyi" # the key of the org you chose at step #3
     token: "${SONAR_TOKEN}" # encrypted value of your token
 
+install: install.sh
+
 script:
-  - ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck; fi'
+  - echo "hello i am here!"
 
 after_script: source after.sh
 
