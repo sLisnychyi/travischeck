@@ -1,6 +1,10 @@
 dist: bionic
 language: java
 
+matrix:
+  include:
+    - script: echo "hello i am here!"
+
 addons:
   sonarcloud:
     organization: "slisnychyi" # the key of the org you chose at step #3
