@@ -16,13 +16,3 @@ addons:
 install: source install.sh
 
 script:
-#  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck; fi'
-  - ./mvnw clean install sonar:sonar -Dsonar.projectKey=sLisnychyi_travischeck
-#  - echo "hello i am here!"
-
-after_script: source after.sh
-
-cache:
-  directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
